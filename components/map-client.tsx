@@ -99,7 +99,7 @@ const PROGRAM_KERJA: ProgramKerja[] = [
     },
     {
         id: "Sertifikasi Halal",
-        label: "Setifikasi Halal",
+        label: "Sertifikasi Halal",
         color: "#ef4444",
         description: "Titik UMKM yang diterbitkan sertifikasi halalnya",
         locations: [
