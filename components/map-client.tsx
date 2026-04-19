@@ -135,8 +135,8 @@ const PROGRAM_KERJA: ProgramKerja[] = [
             },
             {
                 name: "Toko Kue Putri",
-                lat: null,
-                long: null,
+                lat: -4.006823,
+                long: 119.635465,
                 keterangan: "Kue Bolu"
             },
             {
