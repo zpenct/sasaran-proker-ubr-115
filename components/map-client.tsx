@@ -98,17 +98,66 @@ const PROGRAM_KERJA: ProgramKerja[] = [
         ]
     },
     {
-        id: "kesehatan",
-        label: "Penyuluhan Kesehatan",
+        id: "Sertifikasi Halal",
+        label: "Setifikasi Halal",
         color: "#ef4444",
-        description: "Titik pelaksanaan penyuluhan kesehatan masyarakat dan posyandu",
+        description: "Titik UMKM yang diterbitkan sertifikasi halalnya",
         locations: [
-            { name: "Posyandu Melati", lat: -4.009100, long: 119.630800, keterangan: "Posyandu balita & ibu hamil" },
-            { name: "Puskesmas Pembantu Soreang", lat: -4.008200, long: 119.631500, keterangan: "Layanan kesehatan dasar" },
-            { name: "Balai RT 03", lat: -4.010000, long: 119.629800, keterangan: "Penyuluhan hipertensi & diabetes" },
-            { name: "Masjid Al-Ikhlas", lat: -4.007800, long: 119.632100, keterangan: "Sosialisasi PHBS" },
-            { name: "SD Inpres Soreang", lat: -4.009300, long: 119.631900, keterangan: "Penyuluhan kesehatan gigi anak" },
-        ],
+            {
+                name: "Warung Anugerah",
+                lat: -4.008886059781314,
+                long: 119.63057115251502,
+                keterangan: "Nasi Kuning"
+            },
+            {
+                name: "Nasi Kuning Mama Kembar",
+                lat: -4.010612988427792,
+                long: 119.62828706389945,
+                keterangan: "Nasi Kuning"
+            },
+            {
+                name: "Sop Ubi Lormas",
+                lat: -4.008813054600805,
+                long: 119.63324053902221,
+                keterangan: "Makanan Jadi"
+            },
+            {
+                name: "Cireng",
+                lat: -4.00907125207459,
+                long: 119.62711359484368,
+                keterangan: "Cireng Isi"
+            },
+            {
+                name: "Kedai Rezky",
+                lat: -4.00865277799513,
+                long: 119.63330364156742,
+                keterangan: "Nasi Kuning"
+            },
+            {
+                name: "Toko Kue Putri",
+                lat: null,
+                long: null,
+                keterangan: "Kue Bolu"
+            },
+            {
+                name: "Kedai Alif",
+                lat: -4.0086502,
+                long: 119.632057,
+                keterangan: "Kedai Kue"
+            },
+            {
+                name: "Toko Kue Ibu Hamiah",
+                lat: -4.008168423256539,
+                long: 119.63240865151462,
+                keterangan: "Kedai Kue"
+            },
+            {
+                name: "Mystea",
+                lat: -4.010292552345216,
+                long: 119.62915216600797,
+                keterangan: "Minuman"
+            }
+        ]
     },
     {
         id: "google-business-profile",
