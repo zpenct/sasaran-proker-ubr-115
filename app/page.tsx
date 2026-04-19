@@ -1,19 +1,21 @@
-import { Button } from "@/components/ui/button"
+"use client";
+import dynamic from "next/dynamic";
+import boundaryGeoJson from "@/data/map-polygon.json";
 
-export default function Page() {
+const MapClient = dynamic(() => import("@/components/map-client"), { ssr: false });
+
+export default function PetaPage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <main className="p-4 md:p-8 space-y-4">
+      <div>
+        <h1 className="text-xl md:text-2xl font-semibold">
+          Peta Sasaran Program Kerja KKN
+        </h1>
+        <p className="text-sm text-gray-600 mt-1">
+          Menampilkan titik-titik lokasi pelaksanaan dan sasaran program kerja KKN di wilayah kelurahan.
+        </p>
       </div>
-    </div>
-  )
+      <MapClient boundaryGeoJson={boundaryGeoJson as any} />
+    </main>
+  );
 }
