@@ -240,11 +240,11 @@ function getOuterRing(geojson: any): number[][] {
     throw new Error(`Geometry type tidak didukung: ${geom.type}`);
 }
 
-const createDotIcon = (color: string, size: "sm" | "md" = "md") => {
-    const dotSize = size === "md" ? 19 : 11;
-    const ringSize = size === "md" ? 24 : 20;
-    return L.divIcon({
-        html: `
+const createDotIcon = (color: string, name: string, size: "sm" | "md" = "md") => {
+  const dotSize = size === "md" ? 18 : 14;
+  const ringSize = size === "md" ? 28 : 22;
+  return L.divIcon({
+    html: `
       <div style="position:relative;width:${ringSize}px;height:${ringSize}px;">
         <div style="
           position:absolute;top:50%;left:50%;
@@ -255,12 +255,29 @@ const createDotIcon = (color: string, size: "sm" | "md" = "md") => {
           border-radius:50%;
           box-shadow:0 1px 4px rgba(0,0,0,0.35);
         "></div>
+        <div style="
+          position:absolute;
+          top:${ringSize}px;
+          left:50%;
+          transform:translateX(-50%);
+          white-space:nowrap;
+          background:white;
+          color:#1f2937;
+          font-size:10px;
+          font-weight:500;
+          padding:1px 5px;
+          border-radius:4px;
+          border:1px solid ${color}40;
+          box-shadow:0 1px 3px rgba(0,0,0,0.15);
+          pointer-events:none;
+          line-height:1.4;
+        ">${name}</div>
       </div>`,
-        className: "custom-dot-marker",
-        iconSize: [ringSize, ringSize],
-        iconAnchor: [ringSize / 2, ringSize / 2],
-        popupAnchor: [0, -(ringSize / 2)],
-    });
+    className: "custom-dot-marker",
+    iconSize: [ringSize, ringSize],
+    iconAnchor: [ringSize / 2, ringSize / 2],
+    popupAnchor: [0, -(ringSize / 2)],
+  });
 };
 
 // ── Sub-components ─────────────────────────────────────────────────────────
@@ -415,7 +432,7 @@ export default function MapClient({ boundaryGeoJson }: { boundaryGeoJson: any })
                                 <Marker
                                     key={`${proker.id}-${loc.name}`}
                                     position={[loc.lat!, loc.long!] as LatLngTuple}
-                                    icon={createDotIcon(proker.color, selectedId === "all" ? "sm" : "md")}
+                                    icon={createDotIcon(proker.color, loc.name, selectedId === "all" ? "sm" : "md")}
                                     eventHandlers={{
                                         mouseover: () =>
                                             setHovered({ ...loc, color: proker.color, prokerLabel: proker.label }),
