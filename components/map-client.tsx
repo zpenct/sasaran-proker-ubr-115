@@ -105,8 +105,8 @@ const PROGRAM_KERJA: ProgramKerja[] = [
         locations: [
             {
                 name: "Warung Anugerah",
-                lat: -4.008886059781314,
-                long: 119.63057115251502,
+                lat: -4.0094402826333555,
+                long: 119.63043351106731,
                 keterangan: "Nasi Kuning"
             },
             {
@@ -128,9 +128,9 @@ const PROGRAM_KERJA: ProgramKerja[] = [
                 keterangan: "Cireng Isi"
             },
             {
-                name: "Kedai Rezky",
-                lat: -4.00865277799513,
-                long: 119.63330364156742,
+                name: "Nasi Kuning Mama Rezky",
+                lat: -4.008906589222721,
+                long: 119.63311683750037,
                 keterangan: "Nasi Kuning"
             },
             {
@@ -141,8 +141,8 @@ const PROGRAM_KERJA: ProgramKerja[] = [
             },
             {
                 name: "Kedai Alif",
-                lat: -4.0086502,
-                long: 119.632057,
+                lat: -4.008846106838238,
+                long: 119.6321946242913,
                 keterangan: "Kedai Kue"
             },
             {
